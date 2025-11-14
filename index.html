@@ -2402,9 +2402,35 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 </script>
 
+
+<section id="mission-rotator" style="padding:20px;background:#061015;color:white;">
+ <h2 style="color:#0af78a;">Misiones alrededor del mundo</h2>
+ <div id="mr-box" style="display:flex;gap:20px;align-items:center;">
+   <div id="mr-map"></div>
+   <div>
+     <div id="mr-title" style="font-size:22px;font-weight:bold;"></div>
+     <div id="mr-desc" style="max-width:300px;opacity:0.9;"></div>
+   </div>
+ </div>
+</section>
+<script>
+const MR = [{"country": "Ghana", "description": "Misi\u00f3n en Ghana", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Colombia", "description": "Misi\u00f3n en Colombia", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Espa\u00f1a", "description": "Misi\u00f3n en Espa\u00f1a", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Estados Unidos", "description": "Misi\u00f3n en Estados Unidos", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Brasil", "description": "Misi\u00f3n en Brasil", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "M\u00e9xico", "description": "Misi\u00f3n en M\u00e9xico", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Argentina", "description": "Misi\u00f3n en Argentina", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Chile", "description": "Misi\u00f3n en Chile", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Kenia", "description": "Misi\u00f3n en Kenia", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "\u00c1frica", "description": "Misi\u00f3n en \u00c1frica", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Europa", "description": "Misi\u00f3n en Europa", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}, {"country": "Asia", "description": "Misi\u00f3n en Asia", "svg": "<svg viewBox=\"0 0 100 100\" width=\"120\" height=\"120\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"50\" cy=\"50\" r=\"50\" fill=\"#0aa150\"/>\n<path d=\"M30 25 C45 10, 70 20, 65 40 C80 55, 55 75, 35 70 C20 60,15 45,30 25Z\"\n      fill=\"rgba(255,255,255,0.9)\" />\n</svg>"}];
+let i=0;
+function updateMR(){
+  const e = MR[i];
+  document.getElementById('mr-title').innerText = e.country;
+  document.getElementById('mr-desc').innerText = e.description;
+  document.getElementById('mr-map').innerHTML = e.svg;
+  i = (i+1) % MR.length;
+}
+updateMR();
+setInterval(updateMR,3000);
+</script>
+
 </body>
 
 </html>
+
 
 
 
