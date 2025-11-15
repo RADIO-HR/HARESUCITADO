@@ -67,6 +67,42 @@
   color:#fff;
   box-shadow:0 0 25px #0f0;
 }
+
+/* AJUSTES PARA CELULAR — MODALES Y TEXTOS MÁS GRANDES */
+@media (max-width: 640px) {
+
+  .hr-modal .hr-photo {
+      width: 150px !important;
+      height: 150px !important;
+  }
+
+  .hr-modal h3 {
+      font-size: 1.4rem !important;
+      text-align: center !important;
+  }
+
+  .hr-modal .hr-label {
+      width: 100% !important;
+      font-size: 1.2rem !important;
+      text-align: left !important;
+  }
+
+  .hr-modal .hr-value {
+      font-size: 1.2rem !important;
+      line-height: 1.45 !important;
+  }
+
+  .hr-modal .hr-field {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+  }
+
+  .hr-modal .hr-head {
+      flex-direction: column !important;
+      text-align: center !important;
+  }
+}
+
 </style>
 
 
@@ -2335,14 +2371,14 @@ document.querySelectorAll('.modal').forEach(modal=>{
   </div>
 </div>
 
-<div id="hr-modal-damas" class="hr-modal" role="dialog" aria-hidden="true">
-  <div class="hr-modal-box">
+<div id="hr-modal-damas" class="hr-modal" role="dialog" aria-hidden="true"><div class="hr-modal-box">
     <button class="hr-close-btn" onclick="closeHrModal('hr-modal-damas')">&times;</button>
     <div class="hr-head">
      <img class="hr-photo" src="lider_damas.jpg" alt="Líder Damas">
       <div><h3>Ministerio de Damas — Hna. ROXANA RATHAN</h3><div class="hr-meta">Líder de Damas</div><div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div></div>
     </div>
-    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-0505</div></div>
+    <div class="hr-field"><div class="hr-label">Teléfono:     (803) 555-0505</div>
+<div class="hr-value">+1 (803) 555-0505</div></div>
     <div class="hr-field"><div class="hr-label">Célula de Estudio Bíblico:</div><div class="hr-value">Estudio Bíblico — Miércoles, 8:00 PM</div></div>
     <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035550505" target="_blank">💬 WhatsApp</a></div>
   </div>
@@ -2546,6 +2582,81 @@ setInterval(updateMR,3000);
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
