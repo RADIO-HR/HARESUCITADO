@@ -1760,7 +1760,27 @@
                         <span class="text-sm font-medium">Ministerio de Evangelismo</span>
                     </div>
 
-                </div>
+                
+                    <div class="hr-ministry-card" data-modal="hr-modal-limpieza" tabindex="0">
+                        <span class="material-symbols-outlined text-primary">cleaning_services</span>
+                        <span class="text-sm font-medium">Ministerio de Limpieza</span>
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-oracion" tabindex="0">
+                        <span class="material-symbols-outlined text-primary">volunteer_activism</span>
+                        <span class="text-sm font-medium">Ministerio de Oración</span>
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-misionero" tabindex="0">
+                        <span class="material-symbols-outlined text-primary">public</span>
+                        <span class="text-sm font-medium">Ministerio Misionero</span>
+                    </div>
+
+                    <div class="hr-ministry-card" data-modal="hr-modal-diaconado" tabindex="0">
+                        <span class="material-symbols-outlined text-primary">support</span>
+                        <span class="text-sm font-medium">Ministerio de Diaconado</span>
+                    </div>
+    </div>
 
 
             <div id="misiones" class="bg-background-light p-8 rounded-xl shadow-2xl border-t-4 border-primary backdrop-blur-sm">
@@ -2366,6 +2386,79 @@ document.querySelectorAll('.modal').forEach(modal=>{
     <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18036383665" target="_blank">💬 WhatsApp</a></div>
   </div>
 </div>
+
+<!-- BEGIN: Newly added ministry modals -->
+
+<div id="hr-modal-limpieza" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-limpieza')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="imagenes/lider_limpieza.jpg" alt="Líder Limpieza">
+      <div>
+        <h3>Ministerio de Limpieza — Hna. Rosa Martínez</h3>
+        <div class="hr-meta">Coordinadora del Ministerio</div>
+        <div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div>
+      </div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-1111</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">No</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035551111" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-oracion" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-oracion')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="imagenes/lider_oracion.jpg" alt="Líder Oración">
+      <div>
+        <h3>Ministerio de Oración — Hna. Diana Pérez</h3>
+        <div class="hr-meta">Coordinadora de Oración</div>
+        <div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div>
+      </div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-2222</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">Grupo de Intercesión — Lunes 7:00 PM</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035552222" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-misionero" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-misionero')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="imagenes/lider_misionero.jpg" alt="Líder Misionero">
+      <div>
+        <h3>Ministerio Misionero — Pr. Carlos Díaz</h3>
+        <div class="hr-meta">Coordinador de Misiones</div>
+        <div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div>
+      </div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-3333</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">Misiones — Domingo 5:00 PM</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035553333" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<div id="hr-modal-diaconado" class="hr-modal" role="dialog" aria-hidden="true">
+  <div class="hr-modal-box">
+    <button class="hr-close-btn" onclick="closeHrModal('hr-modal-diaconado')">&times;</button>
+    <div class="hr-head">
+      <img class="hr-photo" src="imagenes/lider_diaconado.jpg" alt="Líder Diaconado">
+      <div>
+        <h3>Ministerio de Diaconado — Hno. Luis Herrera</h3>
+        <div class="hr-meta">Diácono Principal</div>
+        <div class="hr-meta">Dirección: 1918 Augusta Rd, West Columbia, SC</div>
+      </div>
+    </div>
+    <div class="hr-field"><div class="hr-label">Teléfono:</div><div class="hr-value">+1 (803) 555-4444</div></div>
+    <div class="hr-field"><div class="hr-label">Célula:</div><div class="hr-value">No</div></div>
+    <div class="hr-actions"><a class="hr-btn-wa" href="https://wa.me/18035554444" target="_blank">💬 WhatsApp</a></div>
+  </div>
+</div>
+
+<!-- END: Newly added ministry modals -->
+
 <!-- END HR MINISTRIES MODALS -->
 
 
@@ -2426,9 +2519,49 @@ updateMR();
 setInterval(updateMR,3000);
 </script>
 
+
+<script>
+// Bind hr-ministry-card clicks (ensure accessibility)
+(function(){
+  function safeOpen(id){
+    if (typeof openHrModal === 'function') return openHrModal(id);
+    const m = document.getElementById(id);
+    if(m){ m.classList.add('open'); document.body.style.overflow='hidden'; }
+  }
+  document.querySelectorAll('.hr-ministry-card').forEach(card=>{
+    if(!card.dataset.bound){
+      card.addEventListener('click', function(){
+        const id = this.getAttribute('data-modal');
+        if(id) safeOpen(id);
+      });
+      card.addEventListener('keydown', function(e){
+        if(e.key==='Enter' || e.key===' ') { e.preventDefault(); const id=this.getAttribute('data-modal'); if(id) safeOpen(id); }
+      });
+      card.dataset.bound = "1";
+    }
+  });
+})();
+</script>
+
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
