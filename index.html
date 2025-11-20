@@ -2216,7 +2216,7 @@
     function startAutoplay() {
         if (slides.length <= 1) return;
         if (intervalId) clearInterval(intervalId); // Limpia cualquier intervalo anterior
-        intervalId = setInterval(nextSlide, 5000); // Cambia cada 5 segundos (5000 milisegundos)
+        intervalId = setInterval(nextSlide, 5000); // Cambia cada 10 segundos (5000 milisegundos)
     }
 
     // Eventos de botones
@@ -2614,6 +2614,7 @@ setInterval(updateMR,3000);
 </body>
 
 </html>
+
 
 
 
