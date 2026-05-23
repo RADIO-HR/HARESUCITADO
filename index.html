@@ -2493,16 +2493,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 <section id="mission-rotator" style="padding:20px;background:#061015;color:white;">
   <h2 style="color:#fc9336;">Misiones alrededor del mundo</h2>
-  <div id="mr-box" style="display:flex;gap:20px;align-items:center;">
+  <div id="mr-box" style="display:flex;gap:20px;align-items:center; flex-wrap: wrap;">
     
-    <img src="mapa-misiones.jpg" alt="Mapa" style="width:150px; height:auto; border-radius:8px;">
+    <img src="portadaaudio.jpg" alt="Mapa" style="width:150px; height:auto; border-radius:8px;">
     
     <div style="flex-grow: 1;">
       <div id="mr-title" style="font-size:22px;font-weight:bold;"></div>
       <div id="mr-desc" style="max-width:300px;opacity:0.9;"></div>
     </div>
 
-    <img id="mr-flag" src="" alt="Bandera" style="width:60px; height:auto; border: 2px solid white; border-radius:4px;">
+    <img id="mr-flag" src="" alt="Bandera" style="width:80px; height:auto; border: 2px solid white; border-radius:4px;">
   </div>
 </section>
 
@@ -2510,12 +2510,38 @@ document.addEventListener('DOMContentLoaded', ()=>{
 const MR = [
   {"country": "Ghana", "code": "gh", "description": "Misión en Ghana"},
   {"country": "Colombia", "code": "co", "description": "Misión en Colombia"},
-  {"country": "España", "code": "es", "description": "Misión en España"},
-  {"country": "Estados Unidos", "code": "us", "description": "Misión en Estados Unidos"},
-  {"country": "Brasil", "code": "br", "description": "Misión en Brasil"},
-  {"country": "México", "code": "mx", "description": "Misión en México"},
   {"country": "Argentina", "code": "ar", "description": "Misión en Argentina"},
-  {"country": "Chile", "code": "cl", "description": "Misión en Chile"}
+  {"country": "Brasil", "code": "br", "description": "Misión en Brasil"},
+  {"country": "Chile", "code": "cl", "description": "Misión en Chile"},
+  {"country": "México", "code": "mx", "description": "Misión en México"},
+  {"country": "España", "code": "es", "description": "Misión en España"},
+  {"country": "Haití", "code": "ht", "description": "Misión en Haití"},
+  {"country": "Honduras", "code": "hn", "description": "Misión en Honduras"},
+  {"country": "Italia", "code": "it", "description": "Misión en Italia"},
+  {"country": "Kenia", "code": "ke", "description": "Misión en Kenia"},
+  {"country": "Corea", "code": "kr", "description": "Misión en Corea"},
+  {"country": "Liberia", "code": "lr", "description": "Misión en Liberia"},
+  {"country": "Malasia", "code": "my", "description": "Misión en Malasia"},
+  {"country": "Nigeria", "code": "ng", "description": "Misión en Nigeria"},
+  {"country": "Pakistán", "code": "pk", "description": "Misión en Pakistán"},
+  {"country": "Panamá", "code": "pa", "description": "Misión en Panamá"},
+  {"country": "Perú", "code": "pe", "description": "Misión en Perú"},
+  {"country": "Portugal", "code": "pt", "description": "Misión en Portugal"},
+  {"country": "Puerto Rico", "code": "pr", "description": "Misión en Puerto Rico"},
+  {"country": "Rusia", "code": "ru", "description": "Misión en Rusia"},
+  {"country": "Sierra Leona", "code": "sl", "description": "Misión en Sierra Leona"},
+  {"country": "Sudáfrica", "code": "za", "description": "Misión en Sudáfrica"},
+  {"country": "Tanzania", "code": "tz", "description": "Misión en Tanzania"},
+  {"country": "Turcas y Caicos", "code": "tc", "description": "Misión en Turcas y Caicos"},
+  {"country": "Tuvalu", "code": "tv", "description": "Misión en Tuvalu"},
+  {"country": "Uganda", "code": "ug", "description": "Misión en Uganda"},
+  {"country": "Ucrania", "code": "ua", "description": "Misión en Ucrania"},
+  {"country": "Reino Unido", "code": "gb", "description": "Misión en Reino Unido"},
+  {"country": "Uruguay", "code": "uy", "description": "Misión en Uruguay"},
+  {"country": "Venezuela", "code": "ve", "description": "Misión en Venezuela"},
+  {"country": "Zambia", "code": "zm", "description": "Misión en Zambia"},
+  {"country": "Zimbabue", "code": "zw", "description": "Misión en Zimbabue"},
+  {"country": "Estados Unidos", "code": "us", "description": "Misión en EE. UU."}
 ];
 
 let i = 0;
@@ -2523,7 +2549,6 @@ function updateMR(){
   const e = MR[i];
   document.getElementById('mr-title').innerText = e.country;
   document.getElementById('mr-desc').innerText = e.description;
-  // Actualiza la bandera dinámicamente usando la API de banderas
   document.getElementById('mr-flag').src = `https://flagcdn.com/w80/${e.code}.png`;
   i = (i + 1) % MR.length;
 }
